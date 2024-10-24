@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="resume-container">
+
+    <!-- Background Animation Div -->
+    <div class="background-animation"></div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
         <header>
+            <!-- Profile Picture -->
+            <div class="profile-pic-container">
+                <img src="pff.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+
             <h1>Manu B.M</h1>
-            <h2>Student</h2>
+            <p>Engineering Student</p>
         </header>
-        <section class="profile">
-            <h3>PROFILE</h3>
-            <p>I'm an Engineering student. I consider myself a responsible and orderly person. I am looking forward to my first work experience.</p>
-        </section>
-        
-        <section class="contact">
-            <h3>CONTACT ME</h3>
-            <ul>
-                <li>Phone: +91 6363026768</li>
-                <li>Email: <a href="mailto:manugowda44144@gmail.com">manugowda44144@gmail.com</a></li>
-                <li>Address: PESITM, Sagar Road, Shivamogga-577201</li>
-            </ul>
+
+        <!-- About Me Section -->
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
+            <p>I am an Engineering student. I consider myself responsible and orderly. Looking forward to gaining work experience in the industry.</p>
         </section>
 
-        <section class="courses">
-            <h3>COURSES</h3>
-            <p>Python course for beginners (mastering the essentials)</p>
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <p>PES Institute of Technology and Management</p>
+            <p>B.E. in Artificial Intelligence and Machine Learning, in progress (2023-2027)</p>
         </section>
 
-        <section class="education">
-            <h3>EDUCATION</h3>
-            <p><strong>PES Institute of Technology and Management</strong></p>
-            <p>Engineering in Artificial Intelligence and Machine Learning, in progress.</p>
-            <p>PESITM (VTU), 2023-2027</p>
-        </section>
-
-        <section class="skills">
-            <h3>COMPUTER SKILLS</h3>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
             <ul>
                 <li>Python</li>
                 <li>C, C++</li>
@@ -47,10 +55,24 @@
             </ul>
         </section>
 
-        <section class="language">
-            <h3>LANGUAGE</h3>
-            <p>Native English</p>
+        <!-- Contact Me Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Phone: +91 6363026768</p>
+            <p>Email: manugowda44144@gmail.com</p>
+            <p>Address: PESITM, Sagar Road, Shivamogga-577201</p>
+        </section>
+
+        <!-- Resume Download Section -->
+        <section class="resume-download">
+            <button onclick="downloadResume()">Download Resume</button>
         </section>
     </div>
+
+    <script>
+        function downloadResume() {
+            window.location.href = "resume.pdf"; // Replace with the path to your resume file
+        }
+    </script>
 </body>
 </html>
